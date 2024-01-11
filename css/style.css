@@ -5,9 +5,27 @@
 }
 /* reset */
 
+/* elementi comuni a tutta la pagina */
 .container{
     display: flex;
 }
+
+.row{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.col{
+    /* width: calc((100% - (5 * 16px)) / 6); */
+    width: calc(100% / 6 - 16px / 6 * 5);
+    height: 270px;
+    border: 1px solid greenyellow;
+    /* test */
+}
+/* fine elementi comuni a tutta la pagina */
+
+
 
 
 /* navbar */
@@ -27,13 +45,42 @@ main{
     background-color: #141922;
     height: 100vh;
     /* test */
+    
+    padding: 0 25px;
 
     flex-grow: 1;
+
+    overflow-y: auto;
 }
 /* fine main */
 
 
-/* sezione player */
+/* sezione "recently played" */
+#recently-played{
+    margin-top: 75px;
+    /* test */
+
+    margin-bottom: 50px;
+}
+/* fine sezione "recently played" */
+
+
+/* sezione "create for you" */
+#create-for-you{
+    margin-bottom: 40px;
+}
+/* fine sezione "create for you" */
+
+
+
+/* sezione "artists" */
+
+/* fine sezione "artists" */
+
+
+
+
+/* sezione player (footer) */
 #player{
     height: 90px;
     background-color: #282828;
@@ -45,13 +92,44 @@ main{
 
 
 /* SOLUZIONI REPONSIVE */
-@media screen and (max-width: 552px) {
+
+/* soluzione laptop */
+@media screen and (max-width: 1200px){
+    
+    .col{
+        /* width: calc((100% - (3 * 16px)) / 4); */
+        width: calc(100% / 4 - 16px / 4 * 3);
+    }
+
+}
+/* fine soluzione laptop */
+
+
+
+/* soluzione tablet */
+@media screen and (max-width: 992px) {
+
+    .col{
+        width: calc(100% / 2 - 16px / 2 * 1);
+    }
+
+}
+/* fine soluzione tablet */
+
+
+
+/* soluzione mobile */
+@media screen and (max-width: 768px) {
 
     nav{
         width: 50px;
     }
 
 }
+/*fine soluzione mobile */
+
+/*FINE SOLUZIONI REPONSIVE */
+
 
 
 
