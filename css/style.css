@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* reset */
+
+.container{
+    display: flex;
+}
+
+
+/* navbar */
+nav{
+    background-color: black;
+    height: 100vh;
+    /* test */
+
+    width: 230px;
+}
+/* fine navbar */
+
+
+
+/* main */
+main{
+    background-color: #141922;
+    height: 100vh;
+    /* test */
+
+    flex-grow: 1;
+}
+/* fine main */
+
+
+/* sezione player */
+#player{
+    height: 90px;
+    background-color: #282828;
+    /* test */
+}
+/* fine sezione player */
+
+
+
+
+/* SOLUZIONI REPONSIVE */
+@media screen and (max-width: 552px) {
+
+    nav{
+        width: 50px;
+    }
+
+}
+
+
+
