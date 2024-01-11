@@ -6,6 +6,10 @@
 /* reset */
 
 /* elementi comuni a tutta la pagina */
+body{
+    overflow: hidden;
+}
+
 .container{
     display: flex;
 }
@@ -35,6 +39,8 @@ nav{
     /* test */
 
     width: 230px;
+
+    z-index: 1;
 }
 /* fine navbar */
 
@@ -42,11 +48,12 @@ nav{
 
 /* main */
 main{
+    /* margin-bottom: 90px; */
     background-color: #141922;
     height: 100vh;
     /* test */
     
-    padding: 0 25px;
+    padding: 165px 25px 135px; /* valori da fixare */
 
     flex-grow: 1;
 
@@ -55,9 +62,27 @@ main{
 /* fine main */
 
 
+
+/* upgrade */
+#upgrade{
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: end;
+    color: white;
+    /* test */
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/* fine upgrade */
+
+
+
 /* sezione "recently played" */
 #recently-played{
-    margin-top: 75px;
+    /* margin-top: 165px; */
     /* test */
 
     margin-bottom: 50px;
@@ -82,9 +107,13 @@ main{
 
 /* sezione player (footer) */
 #player{
+    width: 100vw;
     height: 90px;
     background-color: #282828;
     /* test */
+
+    position: fixed;
+    bottom: 0;
 }
 /* fine sezione player */
 
