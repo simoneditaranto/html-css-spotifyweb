@@ -22,7 +22,7 @@ body{
 
 .col{
     width: calc(100% / 6 - 16px / 6 * 5);
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
     /* test */
 
     display: flex;
@@ -35,10 +35,9 @@ body{
 .col img{
     align-self: flex-start;
 
-    margin-bottom: 20px;
-
     width: 100%;
-    max-width: 230px;
+
+    margin-bottom: 20px;
 }
 
 ul{
@@ -71,7 +70,7 @@ nav{
     height: 100vh;
     /* test */
 
-    width: 230px;
+    min-width: 230px;
 
     z-index: 1;
 }
@@ -120,6 +119,7 @@ main{
 #choice ul{
     display: flex;
     justify-content:  center;
+    flex-wrap: wrap;
     gap: 25px;
     
     color: #7B7D82;
@@ -131,11 +131,9 @@ main{
 
 /* sezione "recently played" */
 #recently-played{
-    /* margin-top: 165px; */
-    /* test */
-
     margin-bottom: 50px;
 }
+
 
 #recently-played h2{
     margin-bottom: 35px;
@@ -143,16 +141,37 @@ main{
 /* fine sezione "recently played" */
 
 
+
 /* sezione "create for you" */
 #create-for-you{
     margin-bottom: 40px;
+}
+
+#create-for-you h2{
+    margin-bottom: 15px;
+}
+
+#create-for-you .subtitle{
+    margin-bottom: 35px;
 }
 /* fine sezione "create for you" */
 
 
 
 /* sezione "artists" */
+#artists .row .col img{
+    width: 100%;
 
+    border-radius: 50%;
+}
+
+#artists h2{
+    margin-bottom: 15px;
+}
+
+#artists .subtitle{
+    margin-bottom: 35px;
+}
 /* fine sezione "artists" */
 
 
@@ -167,6 +186,7 @@ main{
 
     position: fixed;
     bottom: 0;
+    z-index: 2;
 }
 /* fine sezione player */
 
@@ -184,6 +204,8 @@ main{
 
     .col img{
         align-self: center;
+
+        /* width: 100%; */
     }
 
 }
@@ -207,11 +229,26 @@ main{
 @media screen and (max-width: 768px) {
 
     nav{
-        width: 50px;
+        min-width: 50px;
     }
 
 }
 /*fine soluzione mobile */
+
+
+@media screen and (min-width: 1201px){
+
+    #recently-played .row .col img{
+        width: 100%;
+        max-width: 210px;
+    }
+
+    #create-for-you .row .col img{
+        width: 100%;
+        max-width: 230px;
+    }
+
+}
 
 /*FINE SOLUZIONI REPONSIVE */
 
