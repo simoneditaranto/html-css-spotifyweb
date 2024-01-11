@@ -21,11 +21,44 @@ body{
 }
 
 .col{
-    /* width: calc((100% - (5 * 16px)) / 6); */
     width: calc(100% / 6 - 16px / 6 * 5);
-    height: 270px;
     border: 1px solid greenyellow;
     /* test */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.col img{
+    align-self: flex-start;
+
+    margin-bottom: 20px;
+
+    width: 100%;
+    max-width: 230px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h2{
+    color: white;
+}
+
+.title{
+    margin-bottom: 10px;
+
+    font-weight: bold;
+
+    color: white;
+}
+
+.subtitle{
+    color: #7B7D82;
 }
 /* fine elementi comuni a tutta la pagina */
 
@@ -45,24 +78,6 @@ nav{
 /* fine navbar */
 
 
-
-/* main */
-main{
-    /* margin-bottom: 90px; */
-    background-color: #141922;
-    height: 100vh;
-    /* test */
-    
-    padding: 165px 25px 135px; /* valori da fixare */
-
-    flex-grow: 1;
-
-    overflow-y: auto;
-}
-/* fine main */
-
-
-
 /* upgrade */
 #upgrade{
     width: 100%;
@@ -80,12 +95,50 @@ main{
 
 
 
+/* main */
+main{
+    /* margin-bottom: 90px; */
+    background-color: #141922;
+    height: 100vh;
+    /* test */
+    
+    padding: 90px 25px 135px; /* valori da fixare */
+
+    flex-grow: 1;
+
+    overflow-y: auto;
+}
+/* fine main */
+
+
+/* sezione "choice" */
+#choice{
+    padding-top: 25px;
+    margin-bottom: 45px;
+}
+
+#choice ul{
+    display: flex;
+    justify-content:  center;
+    gap: 25px;
+    
+    color: #7B7D82;
+}
+/* fine sezione "choice" */
+
+
+
+
 /* sezione "recently played" */
 #recently-played{
     /* margin-top: 165px; */
     /* test */
 
     margin-bottom: 50px;
+}
+
+#recently-played h2{
+    margin-bottom: 35px;
 }
 /* fine sezione "recently played" */
 
@@ -126,8 +179,11 @@ main{
 @media screen and (max-width: 1200px){
     
     .col{
-        /* width: calc((100% - (3 * 16px)) / 4); */
         width: calc(100% / 4 - 16px / 4 * 3);
+    }
+
+    .col img{
+        align-self: center;
     }
 
 }
