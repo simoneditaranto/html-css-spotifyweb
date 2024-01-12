@@ -7,7 +7,8 @@
 
 /* elementi comuni a tutta la pagina */
 body{
-    overflow: hidden;
+    /* overflow: hidden; */
+    color: white;
 }
 
 .container{
@@ -23,13 +24,11 @@ body{
 }
 
 .col{
-    width: calc(100% / 6 - 16px / 6 * 5);
-    /* border: 1px solid greenyellow; */
-    /* test */
-
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: calc(100% / 6 - 16px / 6 * 5);
 
     text-align: center;
 }
@@ -46,20 +45,14 @@ ul{
     list-style-type: none;
 }
 
-h2{
-    color: white;
-}
-
 .title{
     margin-bottom: 10px;
 
     font-weight: bold;
-
-    color: white;
 }
 
 .subtitle{
-    color: #7B7D82;
+    opacity: 0.4;
 }
 /* fine elementi comuni a tutta la pagina */
 
@@ -71,24 +64,28 @@ nav{
     height: 100%;
     /* test */
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     padding: 20px;
 
     min-width: 230px;
 
     overflow-y: auto;
 
-    /* z-index: 1; */
-
-    color: #717171;
-
     background-color: black;
 }
 
-#left-nav-first img{
+#nav-top #logo{
     margin-bottom: 30px;
 }
 
-#left-nav-first #navigation{
+#nav-top #logo img{
+    width: 130px;
+}
+
+#nav-top #navigation{
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -96,36 +93,125 @@ nav{
     margin-bottom: 30px;
 }
 
-#left-nav-first .navigation .nav-row i{
-    margin-right: 8px;
+#navigation .nav-row{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
-    font-size: 20px;
+    opacity: 0.4;
 }
 
-#left-nav-first h3{
+#navigation .nav-row img{
+    width: 25px;
+}
+
+#playlist{
+    margin-bottom: 50px;
+}
+
+#playlist h3{
     margin-bottom: 15px;
-
-    color: white;
 }
 
-#left-nav-first .new-playlist{
+#playlist .new-playlist{
     margin-bottom: 20px;
+
+    opacity: 0.4;
 }
 
-#left-nav-first .new-playlist i{
+#playlist .new-playlist i{
     padding: 10px;
     margin-right: 10px;
     
     color: black;
-    background-color: #717171
+    background-color: rgba(100%, 100%, 100%, 0.4);
 }
 
-#left-nav-first ul{
-    margin-bottom: 90px;
+#playlist ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-#left-nav-first ul li{
-    margin-bottom: 20px;
+#playlist ul li{
+    opacity: 0.4;
+}
+
+#nav-bot{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#download{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    opacity: 0.4;
+}
+
+#download img{
+    width: 25px;
+}
+
+#nav-bot hr{
+    opacity: 0.4;
+}
+
+#user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+#user img{
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    object-fit: contain;
+
+    background-color: #808080;
+}
+
+
+nav #top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+
+nav #top img:first-of-type{
+    width: 25px;
+}
+
+nav img{
+    margin-bottom: 5px;
+
+    width: 20px;
+}
+
+nav #bot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+nav #bot img:nth-of-type(2){
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    object-fit: contain;
+
+    background-color: #808080;
 }
 /* fine navbar */
 
@@ -133,12 +219,11 @@ nav{
 
 /* main */
 main{
-    /* margin-bottom: 90px; */
     background-color: #141922;
     /* height: 100%; */
     /* test */
     
-    padding: 90px 25px; /* valori da fixare */
+    padding: 90px 25px;
 
     flex-grow: 1;
 
@@ -175,8 +260,10 @@ main{
     justify-content:  center;
     flex-wrap: wrap;
     gap: 25px;
-    
-    color: #7B7D82;
+}
+
+#choice ul li{
+    opacity: 0.4;
 }
 /* fine sezione "choice" */
 
@@ -233,12 +320,11 @@ main{
 
 /* sezione player (footer) */
 #player{
-    width: 100%;
-    height: 90px;
+    /* width: 100%; */
     background-color: #282828;
     /* test */
 
-
+    height: 90px;
 }
 /* fine sezione player */
 
@@ -284,6 +370,18 @@ main{
         min-width: 50px;
     }
 
+    nav #nav-top{
+        display: none;
+    }
+
+    nav #nav-bot{
+        display: none;
+    }
+
+    #upgrade{
+        width: calc(100% - 50px);
+    }
+
 }
 /*fine soluzione mobile */
 
@@ -302,6 +400,17 @@ main{
 
 }
 
+@media screen and (min-width: 769px) {
+
+    nav #top{
+        display: none;
+    }
+
+    nav #bot{
+        display: none;
+    }
+
+}
 /*FINE SOLUZIONI REPONSIVE */
 
 
