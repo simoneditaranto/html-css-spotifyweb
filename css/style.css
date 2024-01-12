@@ -12,6 +12,8 @@ body{
 
 .container{
     display: flex;
+
+    height: calc(100vh - 90px); /* 100% della vh - dimensione footer */
 }
 
 .row{
@@ -66,31 +68,66 @@ h2{
 
 /* navbar */
 nav{
-    background-color: black;
-    height: 100vh;
+    height: 100%;
     /* test */
+
+    padding: 20px;
 
     min-width: 230px;
 
-    z-index: 1;
+    overflow-y: auto;
+
+    /* z-index: 1; */
+
+    color: #717171;
+
+    background-color: black;
+}
+
+#left-nav-first img{
+    margin-bottom: 30px;
+}
+
+#left-nav-first #navigation{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+#left-nav-first .navigation .nav-row i{
+    margin-right: 8px;
+
+    font-size: 20px;
+}
+
+#left-nav-first h3{
+    margin-bottom: 15px;
+
+    color: white;
+}
+
+#left-nav-first .new-playlist{
+    margin-bottom: 20px;
+}
+
+#left-nav-first .new-playlist i{
+    padding: 10px;
+    margin-right: 10px;
+    
+    color: black;
+    background-color: #717171
+}
+
+#left-nav-first ul{
+    margin-bottom: 90px;
+}
+
+#left-nav-first ul li{
+    margin-bottom: 20px;
 }
 /* fine navbar */
-
-
-/* upgrade */
-#upgrade{
-    width: 100%;
-    height: 90px;
-    background-color: rgba(0, 0, 0, 0.7);
-    text-align: end;
-    color: white;
-    /* test */
-
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-/* fine upgrade */
 
 
 
@@ -98,16 +135,33 @@ nav{
 main{
     /* margin-bottom: 90px; */
     background-color: #141922;
-    height: 100vh;
+    /* height: 100%; */
     /* test */
     
-    padding: 90px 25px 135px; /* valori da fixare */
+    padding: 90px 25px; /* valori da fixare */
 
     flex-grow: 1;
 
     overflow-y: auto;
 }
 /* fine main */
+
+
+/* upgrade */
+#upgrade{
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: end;
+    color: white;
+    /* test */
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: calc(100% - 230px); /* 100% - dimensione della nav laterale */
+    height: 90px;
+}
+/* fine upgrade */
 
 
 /* sezione "choice" */
@@ -179,14 +233,12 @@ main{
 
 /* sezione player (footer) */
 #player{
-    width: 100vw;
+    width: 100%;
     height: 90px;
     background-color: #282828;
     /* test */
 
-    position: fixed;
-    bottom: 0;
-    z-index: 2;
+
 }
 /* fine sezione player */
 
