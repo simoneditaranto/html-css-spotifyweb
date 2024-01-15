@@ -83,11 +83,6 @@ nav{
     background-color: black;
 }
 
-/* nav > div > div{
-    padding: 20px;
-} */
-
-
 #nav-top #logo{
     margin-bottom: 30px;
 }
@@ -250,15 +245,13 @@ nav #bot #user-image{
 
 /* main */
 main{
-    background-color: #141922;
-    /* height: 100%; */
-    /* test */
-    
     padding: 90px 25px;
-
+    
     flex-grow: 1;
-
+    
     overflow-y: auto;
+
+    background-color: #141922;
 }
 /* fine main */
 
@@ -320,9 +313,21 @@ main{
     opacity: 1;
 }
 
-#choice ul li .active{
-    border-bottom: 2px solid #ADFF2F;
+#choice ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+#choice ul li hr{
+    width: 40%;
+
+    border: 1px solid rgba(173, 255, 47, 1);
+}
+
+/* #choice ul li .active{
+    border-bottom: 2px solid rgba(173, 255, 47, 1);
+} */
 /* fine sezione "choice" */
 
 
@@ -336,6 +341,32 @@ main{
 
 #recently-played h2{
     margin-bottom: 35px;
+}
+
+.select-song{
+    position: relative;
+}
+
+.select-song:hover i{
+    display: inline-block;
+}
+
+.select-song:hover a img{
+    opacity: 0.5;
+}
+
+.select-song i{
+    display: none;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 40px;
+
+    color: white;
 }
 /* fine sezione "recently played" */
 
