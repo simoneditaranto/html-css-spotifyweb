@@ -456,13 +456,29 @@ main{
     margin: 0;
 }
 
+#left .song .song-title .subtitle{
+    color: white;
+}
+
+#left .song .song-title .subtitle:hover{
+    text-decoration: underline;
+
+    opacity: 1;
+}
+
 #left .option{
     display: flex;
     gap: 15px;
 }
 
-#left .option i{
+#left .option a i{
+    color: white;
+
     opacity: 0.4;
+}
+
+#left .option a i:hover{
+    opacity: 1;
 }
 /* fine left */
 
@@ -483,11 +499,17 @@ main{
     gap: 20px;
 }
 
-#center-top i:nth-of-type(3){
+#center-top .fa-circle-play{
     margin-left: 5px;
     margin-right: 5px;
 
     font-size: 30px;
+
+    color: white;
+}
+
+#center-top a .fa-circle-play:hover{
+    transform: scale(1.2);
 }
 
 #center-bot{
@@ -499,13 +521,41 @@ main{
     width: 100%;
 }
 
-#center-bot #time-song{
+#center-bot .time-song{
+    display: flex;
+    align-items: center;
+
     width: 90%;
     height: 5px;
 
     border-radius: 10px;
 
     background-color: rgba(100%, 100%, 100%, 0.4);
+}
+
+#center-bot .time-song.visible{
+    width: 30%;
+
+    background-color: rgba(100%, 100%, 100%, 0.4);
+}
+
+#center-bot .time-song:hover .time-song.visible{
+    background-color: rgba(173, 255, 47, 1);
+}
+
+#center-bot .time-song .time-circle{
+    display: none;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: white;
+}
+
+#center-bot .time-song:hover .time-circle{
+    display: block;
 }
 /* fine center */
 
@@ -522,13 +572,44 @@ main{
 }
 
 
-#right #volume{
+#right .volume{
+    display: flex;
+    align-items: center;
+
     width: 100px;
     height: 5px;
 
     border-radius: 10px;
 
     background-color: rgba(100%, 100%, 100%, 0.4);
+}
+
+.volume .volume-visible{
+    width: 30%;
+    height: 5px;
+
+    border-radius: 10px;
+
+    background-color: rgba(100%, 100%, 100%, 0.4);
+}
+
+.volume:hover .volume-visible{
+    background-color: rgba(173, 255, 47, 1);
+}
+
+.volume .mini-circle{
+    display: none;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: white;
+}
+
+.volume:hover .mini-circle{
+    display: block;
 }
 /* fine right */
 
