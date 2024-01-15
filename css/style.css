@@ -99,6 +99,19 @@ nav{
     margin-bottom: 30px;
 }
 
+#navigation .nav-row{
+    position: relative;
+}
+
+#navigation .nav-row hr{
+    position: absolute;
+    left: -20px;
+
+    height: 25px;
+
+    border: 2px solid rgba(173, 255, 47, 1);
+}
+
 #navigation .nav-row .link{
     display: flex;
     align-items: center;
@@ -108,13 +121,6 @@ nav{
 
     color: white;
 }
-
-/* bonus */
-/* #navigation .nav-row .link.active{
-    border-left: 3px solid #ADFF2F;
-
-    opacity: 1;
-} */
 
 #navigation .nav-row .link:hover{
     opacity: 1;
@@ -286,6 +292,10 @@ main{
     border-radius: 20px;
 
     color: white;
+}
+
+#upgrade .btn:hover{
+    font-size: 16px;
 }
 /* fine upgrade */
 
