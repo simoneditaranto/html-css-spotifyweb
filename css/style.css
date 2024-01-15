@@ -37,14 +37,6 @@ a{
     text-align: center;
 }
 
-.col img{
-    align-self: flex-start;
-
-    width: 100%;
-
-    margin-bottom: 20px;
-}
-
 ul{
     list-style-type: none;
 }
@@ -57,6 +49,16 @@ ul{
 
 .subtitle{
     opacity: 0.4;
+}
+
+.link{
+    opacity: 0.4;
+
+    color: white;
+}
+
+.link:hover{
+    opacity: 1;
 }
 /* fine elementi comuni a tutta la pagina */
 
@@ -81,6 +83,11 @@ nav{
     background-color: black;
 }
 
+/* nav > div > div{
+    padding: 20px;
+} */
+
+
 #nav-top #logo{
     margin-bottom: 30px;
 }
@@ -97,16 +104,29 @@ nav{
     margin-bottom: 30px;
 }
 
-#navigation .nav-row{
+#navigation .nav-row .link{
     display: flex;
     align-items: center;
     gap: 10px;
 
     opacity: 0.4;
+
+    color: white;
+}
+
+/* bonus */
+/* #navigation .nav-row .link.active{
+    border-left: 3px solid #ADFF2F;
+
+    opacity: 1;
+} */
+
+#navigation .nav-row .link:hover{
+    opacity: 1;
 }
 
 #navigation .nav-row img{
-    width: 25px;
+    height: 25px;
 }
 
 #playlist{
@@ -119,8 +139,6 @@ nav{
 
 #playlist .new-playlist{
     margin-bottom: 20px;
-
-    opacity: 0.4;
 }
 
 #playlist .new-playlist i{
@@ -128,7 +146,7 @@ nav{
     margin-right: 10px;
     
     color: black;
-    background-color: rgba(100%, 100%, 100%, 0.4);
+    background-color: white
 }
 
 #playlist ul{
@@ -137,26 +155,20 @@ nav{
     gap: 20px;
 }
 
-#playlist ul li{
-    opacity: 0.4;
-}
-
 #nav-bot{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-#download{
+#download .link{
     display: flex;
     align-items: center;
     gap: 10px;
-
-    opacity: 0.4;
 }
 
 #download img{
-    width: 25px;
+    height: 20px;
 }
 
 #nav-bot hr{
@@ -176,7 +188,8 @@ nav{
 
     border-radius: 50%;
 
-    object-fit: contain;
+    object-fit: cover;
+    object-position: top;
 
     background-color: #808080;
 }
@@ -190,14 +203,20 @@ nav #top{
 }
 
 
-nav #top img:first-of-type{
+nav #top .logo{
     width: 25px;
+
+    opacity: 1;
 }
 
-nav img{
-    margin-bottom: 5px;
+nav #top a img{
+    height: 20px;
 
-    width: 20px;
+    opacity: 0.4;
+}
+
+nav #top a img:hover{
+    opacity: 1;
 }
 
 nav #bot{
@@ -207,7 +226,15 @@ nav #bot{
     gap: 20px;
 }
 
-nav #bot img:nth-of-type(2){
+#download{
+    height: 20px;
+}
+
+#download:hover{
+    opacity: 1;
+}
+
+nav #bot #user-image{
     width: 25px;
     height: 25px;
 
@@ -466,43 +493,6 @@ main{
 
 
 
-/* #player .player-container:nth-of-type(1), #player .player-container:nth-of-type(3){
-    width: 100%;
-} */
-
-/* #player .player-container:nth-of-type(2){
-    width: 60vw;
-} 
-
-.player-container{
-    display: flex;
-    align-items: center;
-    gap: 30px
-}
-
-.player-container .song{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.player-container .song img{
-    width: 40px;
-    height: 40px;
-}
-
-.player-container .song-title .title{
-    margin: 0;
-}
-
-.player-container .option{
-    display: flex;
-    gap: 15px;
-} */
-/* fine sezione player */
-
-
-
 
 /* SOLUZIONI REPONSIVE */
 
@@ -545,6 +535,8 @@ main{
 @media screen and (max-width: 768px) {
 
     nav{
+        padding: 15px;
+
         min-width: 50px;
     }
 
@@ -554,6 +546,10 @@ main{
 
     nav #nav-bot{
         display: none;
+    }
+
+    nav #bot{
+        padding-top: 50px;
     }
 
     #upgrade{
