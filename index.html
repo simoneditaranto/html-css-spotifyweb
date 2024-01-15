@@ -158,17 +158,33 @@
                     
                     <ul>
 
-                        <li>IN EVIDENZA</li>
-                        <li>PODCAST</li>
-                        <li>CLASSIFICHE</li>
-                        <li>GENEREI E MOOD</li>
-                        <li>NUOVE USCITE</li>
-                        <li>SCOPRI</li>
+                        <li>
+                            <a class="active" href="#">IN EVIDENZA</a>
+                        </li>
+
+                        <li>
+                            <a href="#">PODCAST</a>
+                        </li>
+
+                        <li>
+                            <a href="#">CLASSIFICHE</a>
+                        </li>
+
+                        <li>
+                            <a href="#">GENEREI E MOOD</a>
+                        </li>
+
+                        <li>
+                            <a href="#">NUOVE USCITE</a>
+                        </li>
+
+                        <li>
+                            <a href="#">SCOPRI</a>
+                        </li>
 
                     </ul>
 
                 </section>
-                
                 
                 <!-- sezione "recently played" -->
                 <section id="recently-played">
@@ -347,7 +363,9 @@
             <div id="left">
 
                 <div class="song">
+                    <div id="song-img">
                     <img src="./img/sinister.jpeg" alt="">
+                </div>
                     <div class="song-title">
                         <div class="title">Sinister</div>
                         <div class="subtitle">Brano Nome</div>
@@ -381,7 +399,7 @@
 
                     <div class="time">0:25</div>
 
-                    <div class="hr"></div>
+                    <div id="time-song"></div>
 
                     <div class="time">4:35</div>
 
@@ -391,15 +409,13 @@
 
             <div id="right">
 
-                <div id="right-icons">
-                <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars"></i>
 
-                <i class="fa-solid fa-display"></i>
+                    <i class="fa-solid fa-display"></i>
 
-                <i class="fa-solid fa-volume-high"></i>
-                </div>
+                    <i class="fa-solid fa-volume-high"></i>
 
-                <div class="hr"></div>
+                <div id="volume"></div>
 
             </div>
 

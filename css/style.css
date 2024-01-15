@@ -310,8 +310,18 @@ main{
     gap: 25px;
 }
 
-#choice ul li{
+#choice ul li a{
+    color: white;
+
     opacity: 0.4;
+}
+
+#choice ul li a:hover{
+    opacity: 1;
+}
+
+#choice ul li .active{
+    border-bottom: 2px solid #ADFF2F;
 }
 /* fine sezione "choice" */
 
@@ -368,32 +378,22 @@ main{
 
 /* sezione player (footer) */
 #player{
-    /* width: 100%; */
-    background-color: #282828;
-    /* test */
-
     display: flex;
     justify-content: space-between;
-
+    
     padding: 10px;
-
+    
     height: 90px;
-}
 
-#player > div{
-    border: 1px dotted green;
-    /* test */
+    background-color: #282828;
 }
 
 
 /* left */
 #left{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 30px;
-
-    /* width: 200px; */
 }
 
 #left .song{
@@ -402,9 +402,13 @@ main{
     gap: 12px;
 }
 
-#left .song img{
+#song-img{
     width: 40px;
     height: 40x;
+}
+
+#left .song img{
+    width: 100%;
 }
 
 #left .song .song-title .title{
@@ -421,6 +425,7 @@ main{
 }
 /* fine left */
 
+
 /* center */
 #center{
     display: flex;
@@ -428,7 +433,7 @@ main{
     align-items: center;
     gap: 10px;
 
-    width: 50vw;
+    width: 40%;
 }
 
 #center-top{
@@ -453,7 +458,7 @@ main{
     width: 100%;
 }
 
-#center-bot .hr{
+#center-bot #time-song{
     width: 90%;
     height: 5px;
 
@@ -463,26 +468,21 @@ main{
 }
 /* fine center */
 
+
 /* right */
 #right{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 20px;
 
-    width: 20vw;
+    max-width: 200px;
+    min-width: 50px; 
 }
 
-#right-icons{
-    display: flex;
-    gap: 20px;
 
-    width: 30%;
-}
-
-#right .hr{
-    flex-grow: 1;
-
+#right #volume{
+    width: 100px;
     height: 5px;
 
     border-radius: 10px;
@@ -506,7 +506,7 @@ main{
     .col img{
         align-self: center;
 
-        /* width: 100%; */
+        width: 100%;
     }
 
 }
@@ -521,7 +521,7 @@ main{
         width: calc(100% / 2 - 16px / 2 * 1);
     }
 
-    .player-container .option{
+    #left .option{
         flex-direction: column;
         gap: 5px;
     }
@@ -556,8 +556,8 @@ main{
         width: calc(100% - 50px);
     }
 
-    #player{
-        gap: 0;
+    #right{
+        gap: 8px;
     }
 
 }
